@@ -18,4 +18,5 @@ unsigned int _quantite;
 double _prix;
 
 };
+std::ostream& operator<<(std::ostream& os, Produit& p);
 }
