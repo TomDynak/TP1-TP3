@@ -1,5 +1,5 @@
 #include <string>
-
+#include "produit.h"
 namespace produit{
 	Produit::Produit(std::string titre, std::string description, unsigned int quantite, double prix) : _titre(titre), _description(description), _quantite(quantite), _prix(prix) {
 	}
@@ -21,7 +21,7 @@ namespace produit{
 	std::string Afficher(Produit p){
 		return std::string p.getTitre + "\n" + std::string p.getDescription + "\n" + std::toString(p.getQuantite) + std::toString(p.getPrix) + "\n" + "\n" ;
 	}
-	
+
 	std::ostream& operator<<(std::ostream& os, Produit& p){
 	os << p.Afficher();
 	return os;

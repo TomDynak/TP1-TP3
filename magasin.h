@@ -6,6 +6,8 @@
 class Magasin{
 public:
 	Magasin();
+	void addProduit(produit::Produit newProd);
+	void AllProducts();
 private:
 
 	std::vector<produit::Produit> _listeProduits;
