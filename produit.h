@@ -7,6 +7,11 @@ namespace mag{
 	class Produit {
 	public:
 		Produit(std::string titre, std::string description, unsigned int quantite, double prix);
+		void modifQuantite(unsigned int quantite);
+		std::string getTitre();
+		std::string getDescription();
+		unsigned int getQuantite();
+		double getPrix();
 
 	private:
 		std::string _titre;

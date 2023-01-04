@@ -10,7 +10,7 @@ LDFLAGS    =
 SRCS       = main.cpp magasin.cpp produit.cpp
 OBJS       = $(SRCS:.cpp=.o)
 # Replace your_app with the name you want to give to your executable file
-TARGET     = tp3
+TARGET     = tp_trois
 DEPS	   = $(OBJS:.o=.d)
 
 all: $(TARGET)
