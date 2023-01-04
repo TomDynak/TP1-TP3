@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "produit.h"
 
 namespace mag{
@@ -23,6 +24,12 @@ unsigned int Produit::getQuantite(){
 	}
 double Produit::getPrix(){
 	return _prix;
-	};
-
+	}
+std::string toString(Produit p){
+	return p.getTitre() + "\n" + p.getDescription() + "\n" + std::to_string(p.getQuantite()) + "\n" + std::to_string(p.getPrix());
+}
+std::ostream& operator<<(std::ostream& os, Produit& p){
+	os << toString(p);
+	return os;
+};
 }

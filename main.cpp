@@ -5,9 +5,8 @@
 int main(){
 	mag::Magasin Vide();
 	mag::Produit test("PS5","Console de Jeux", 3, 500);
-	std::cout << test.getQuantite() << std::endl;
 	test.modifQuantite(2);
-	std::cout << test.getQuantite() << std::endl;
+	std::cout << test <<std::endl;
 
 	return 0;
 }

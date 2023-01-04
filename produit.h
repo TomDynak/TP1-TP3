@@ -19,6 +19,8 @@ namespace mag{
 		unsigned int _quantite;
 		double _prix;
 	};
+	std::string toString(Produit p);
+	std::ostream& operator<<(std::ostream& os, Produit& p);
 }
 
 #endif
