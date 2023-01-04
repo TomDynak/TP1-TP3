@@ -1,16 +1,18 @@
-#include <vector>
-#include "produit.h"
-#include "client.h"
-#include "commande.h"
+#include <iostream>
 
-class Magasin{
-public:
-	Magasin();
-	void addProduit(produit::Produit newProd);
-	void AllProducts();
-private:
+#ifndef MAGASIN_H
+#define MAGASIN_H
 
-	std::vector<produit::Produit> _listeProduits;
-	std::vector<client::Client> _listeClients;
-	std::vector<commande::Commande> _listeCommandes;
-};
+namespace mag {
+	class Magasin {
+	public:
+		Magasin();
+
+
+
+	private:
+
+
+	};
+}
+#endif

@@ -1,22 +1,19 @@
-#include <string>
+#include <iostream>
+#include "magasin.h"
+#ifndef PRODUIT_H
+#define PRODUIT_H
 
-namespace produit{
-class Produit {
-public:
-	Produit(std::string titre, std::string description, unsigned int quantite, double prix);
-	std::string getTitre();
-	std::string getDescription();
-	unsigned int getQuantite();
-	double getPrix();
-	void modifQuantite(unsigned int quantite);
-	std::string Afficher(Produit p);
+namespace mag{
+	class Produit {
+	public:
+		Produit(std::string titre, std::string description, unsigned int quantite, double prix);
 
-private:
-	std::string _titre;
-	std::string _description;
-	unsigned int _quantite;
-	double _prix;
-
-};
-std::ostream& operator<<(std::ostream& os, Produit& p);
+	private:
+		std::string _titre;
+		std::string _description;
+		unsigned int _quantite;
+		double _prix;
+	};
 }
+
+#endif
