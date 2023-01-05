@@ -1,5 +1,4 @@
 #include <iostream>
-#include "magasin.h"
 #ifndef PRODUIT_H
 #define PRODUIT_H
 

@@ -5,10 +5,10 @@
 namespace mag{
 Produit::Produit(std::string titre, std::string description, unsigned int quantite, double prix): _titre(titre), _description(description), _quantite(quantite), _prix(prix){
 
-}
+	}
 void Produit::modifQuantite(unsigned int quantite){
 	_quantite=quantite;
-}
+	}
 
 
 
@@ -27,9 +27,9 @@ double Produit::getPrix(){
 	}
 std::string toString(Produit p){
 	return p.getTitre() + "\n" + p.getDescription() + "\n" + std::to_string(p.getQuantite()) + "\n" + std::to_string(p.getPrix());
-}
+	}
 std::ostream& operator<<(std::ostream& os, Produit& p){
 	os << toString(p);
 	return os;
-};
+	}
 }
