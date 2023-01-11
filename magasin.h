@@ -19,7 +19,7 @@ namespace mag {
 
 	private:
 	std::vector<Produit> _listeProduits;
-	//std::vector<Client> _listeClients;
+	std::vector<Client> _listeClients;
 
 	};
 }
