@@ -11,13 +11,15 @@ namespace mag{
 		std::string getTitre();
 		std::string getDescription();
 		unsigned int getQuantite();
-		double getPrix();
+		std::string getPrix();
 
 	private:
 		std::string _titre;
 		std::string _description;
 		unsigned int _quantite;
 		double _prix;
+		int _euro;
+		int _centime;
 	};
 	std::string toString(Produit p);
 	std::ostream& operator<<(std::ostream& os, Produit& p);

@@ -38,7 +38,7 @@ namespace mag{
 			return true;
 		}
 	}
-		std::cout<<"Pas trouvé"<<std::endl;	
+		std::cout<<"Produit non trouvé"<<std::endl;	
 		return false;
 	}
 }

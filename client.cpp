@@ -13,8 +13,7 @@ bool Client::addToPanier(mag::Produit produit){
 	return false;
 	}
 	_panier.push_back(toString(produit));
-	return true;
-	
+	return true;	
 }
 
 void Client::videPanier(){
