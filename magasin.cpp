@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include "magasin.h"
+#include "produit.h"
 
 namespace mag{
 
@@ -17,11 +18,27 @@ namespace mag{
 			std::cout<<_listeProduits.at(i)<<std::endl<<std::endl;
 		}
 	}
-	void Magasin::searchProd(std::string titre){
+	bool Magasin::searchProd(std::string titre){
 		for (int i=0; i<_listeProduits.size(); i++){
 			if(titre==_listeProduits.at(i).getTitre()){
 				std::cout<<_listeProduits.at(i)<<std::endl<<std::endl;
-			}
+				return true;
+			}							
 		}
+		std::cout<<"Pas trouvé"<<std::endl;
+		return false;		
+	}
+	bool Magasin::majProd(std::string titre){
+		for (int i=0; i<_listeProduits.size(); i++){
+			if(titre==_listeProduits.at(i).getTitre()){
+			unsigned int quantite;
+			std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<titre<<std::endl;
+			std::cin >> quantite;
+			_listeProduits.at(i).modifQuantite(quantite);
+			return true;
+		}
+	}
+		std::cout<<"Pas trouvé"<<std::endl;	
+		return false;
 	}
 }
