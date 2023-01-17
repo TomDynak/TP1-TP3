@@ -11,7 +11,8 @@ namespace mag{
 		std::string getTitre();
 		std::string getDescription();
 		unsigned int getQuantite();
-		std::string getPrix();
+		std::string getPrixString();
+		double getPrix();
 
 	private:
 		std::string _titre;
@@ -22,6 +23,7 @@ namespace mag{
 		int _centime;
 	};
 	std::string toString(Produit p);
+	//std::string toStringClient(Produit p);
 	std::ostream& operator<<(std::ostream& os, Produit& p);
 }
 

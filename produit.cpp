@@ -21,15 +21,24 @@ std::string Produit::getDescription(){
 unsigned int Produit::getQuantite(){
 	return _quantite;
 	}
-std::string Produit::getPrix(){
+std::string Produit::getPrixString(){
 	_euro=_prix;
 	_centime=(_prix-_euro)*100;
-	return std::to_string(_euro) + "." + std::to_string(_centime);
+	return std::to_string(_euro) + "." + std::to_string(_centime) + "€";
 	}
+
+double Produit::getPrix(){
+	return _prix;
+}
+
 std::string toString(Produit p){
-	return p.getTitre() + "\n" + p.getDescription() + "\n" + std::to_string(p.getQuantite()) + "\n"
-	+ p.getPrix();
+	return p.getTitre() + "\n" + p.getDescription() + "\n" + std::to_string(p.getQuantite()) + "\n"+ p.getPrixString();
 	}
+
+	/*std::string toStringClient(Produit p){
+		return p.getTitre() + "\n" + p.getDescription() + "\n"+ p.getPrix();
+	}*/
+
 std::ostream& operator<<(std::ostream& os, Produit& p){
 	os << toString(p);
 	return os;
