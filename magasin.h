@@ -2,6 +2,7 @@
 #include <vector>
 #include "produit.h"
 #include "client.h"
+#include "commande.h"
 
 #ifndef MAGASIN_H
 #define MAGASIN_H

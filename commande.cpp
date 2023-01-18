@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "magasin.h"
 #include "produit.h"
 #include "commande.h"
 
@@ -35,7 +34,7 @@ namespace mag{
 
 	void Commande::addProduit(std::string titre, std::string description, unsigned int quantite, double prix){
 		int a = searchEqTitre(titre);
-		if(a > 0){ //Mise a jour
+		if(a > 0){ //Mise a jour si on retrouve le même titre, donc le même produit
 			_descriptions.at(a) = description;
 			_quantites.at(a) = quantite;
 			_prix.at(a) = prix;
@@ -45,6 +44,20 @@ namespace mag{
 			_quantites.push_back(quantite);
 			_prix.push_back(prix);
 		}
+	}
+	void Commande::addProduit(Produit p){
+		int a = searchEqTitre(p.getTitre());
+		if(a > 0){ //Mise a jour si on retrouve le même titre, donc le même produit
+			_descriptions.at(a) = p.getDescription();
+			_quantites.at(a) += 1;
+			_prix.at(a) = p.getPrix();
+		}else{
+			_titres.push_back(p.getTitre());
+			_descriptions.push_back(p.getDescription());
+			_quantites.push_back(1);
+			_prix.push_back(p.getPrix());
+		}
+
 	}
 
 

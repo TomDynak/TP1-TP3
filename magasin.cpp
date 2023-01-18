@@ -3,6 +3,7 @@
 #include <vector>
 #include "magasin.h"
 #include "produit.h"
+#include "commande.h"
 
 namespace mag{
 
