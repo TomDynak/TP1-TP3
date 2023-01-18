@@ -79,7 +79,7 @@ namespace mag{
 
 		}
 		else{
-			_listeClients.at(a).suppProduitPanier(_listeProduits.at(b))
+			_listeClients.at(a).suppProduitPanier(_listeProduits.at(b));
 		}
 
 	}
@@ -91,7 +91,7 @@ namespace mag{
 
 		}
 		else{
-			_listeClients.at(a).modifQuantPanier(_listeProduits.at(b))
+			_listeClients.at(a).modifQuantPanier(_listeProduits.at(b));
 		}
 
 	}
@@ -99,6 +99,13 @@ namespace mag{
 		for (int i=0; i<_listeClients.size(); i++){
 			_listeClients.at(i).getPanier();
 		}
+	}
+
+	void Magasin::addCommande(std::string ident){ //Recupere le panier
+		Commande c(ident);
+		/*for(int i=0; i < c.getPanierSize(); i++){
+			client.addProduit(getTitrePanier(i),getDescriptionPanier(i),getQuantitePanier(i),getPrixPanier(i));
+		}*/
 	}
 
 }

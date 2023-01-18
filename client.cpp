@@ -33,7 +33,7 @@ bool Client::modifQuantPanier(mag::Produit produit){
 	for (int i=0; i<_titrePanier.size(); i++){
 		if(produit.getTitre()==_titrePanier.at(i)){
 		unsigned int quantite;
-		std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<titre<<std::endl;
+		//std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<titre<<std::endl;
 		std::cin >> quantite;
 		_quantitePanier.at(i)=quantite;
 		return true;
@@ -82,6 +82,26 @@ std::string Client::getPrenom(){
 }
 std::string Client::getNom(){
 	return _nom;
+}
+
+std::string Client::getTitrePanier(int a){
+	return _titrePanier.at(a);
+}
+
+std::string Client::getDescriptionPanier(int a){
+	return _descriptionPanier.at(a);
+}
+
+unsigned int Client::getQuantitePanier(int a){
+	return _quantitePanier.at(a);
+}
+
+double Client::getPrixPanier(int a){
+	return _prixPanier.at(a);
+}
+
+unsigned int Client::getPanierSize(){
+	return _titrePanier.size();
 }
 
 std::string toString(Client c){

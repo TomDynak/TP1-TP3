@@ -22,6 +22,7 @@ namespace mag {
 	void suppPanierClient(std::string ident, std::string titre);
 	void modifQuantPanierClient(std::string ident, std::string titre);
 	void AfficherPanierClient();
+	void addCommande(std::string ident);
 
 
 

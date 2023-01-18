@@ -14,11 +14,16 @@ public:
 	std::string getIdent();
 	std::string getPrenom();
 	std::string getNom();
+	std::string getTitrePanier(int a);
+	std::string getDescriptionPanier(int a);
+	unsigned int getQuantitePanier(int a);
+	double getPrixPanier(int a);
 	void getPanier();
 	bool modifQuantPanier(Produit produit);
 	void videPanier();
 	bool addToPanier(Produit produit);
 	bool suppProduitPanier(Produit produit);
+	unsigned int getPanierSize();
 
 private:
 	std::string _ident;
