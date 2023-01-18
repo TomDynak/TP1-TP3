@@ -13,6 +13,7 @@ namespace mag {
 	void addProd(Produit produit);
     void addClient(Client client);
 	void AfficherListProd();
+	void AfficherListClient();
 	bool searchProd(std::string titre);
     bool searchClient(std::string ident);
 	bool majProd(std::string titre);

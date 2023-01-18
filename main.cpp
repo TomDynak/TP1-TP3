@@ -8,10 +8,13 @@ int main(){
 	mag::Produit test("PS5","Console de Jeux", 3, 500.50);
 	mag::Produit test2("Nintendo Switch","Console de Jeux", 3, 400.50);
 	mag::Client user1("tomdy","Tom","Dynak");
+	mag::Client user2("nbar","Baréké","Ntawiniga");
 	//test.modifQuantite(0);
 
 	Supermarche.addProd(test);
 	Supermarche.addProd(test2);
+	Supermarche.addClient(user1);
+	Supermarche.addClient(user2);
 
 	Supermarche.AfficherListProd();
 
@@ -26,6 +29,7 @@ int main(){
 	user1.getPanier();
 	//user1.videPanier();
 	//user1.getPanier();
+	Supermarche.AfficherListClient();
 
 	return 0;
 }
