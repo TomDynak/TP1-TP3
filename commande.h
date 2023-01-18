@@ -17,7 +17,6 @@ namespace mag {
 	private:
 		int searchEqTitre(std::string titre); //Donne la position de titre doublon, pour mettre a jour un produit existant?
 		std::string _identClient;
-		//std::vector<Produit> _listeProduits; //pas oublier que les produits sont copiés et que les changements ne se propageront pas
 		bool _status; //true = livrée
 		std::vector<std::string> _titres;
 		std::vector<std::string> _descriptions;

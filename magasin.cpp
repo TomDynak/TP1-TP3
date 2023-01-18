@@ -28,25 +28,25 @@ namespace mag{
 			std::cout<<_listeClients.at(i)<<std::endl<<std::endl;
 		}
 	}
-	bool Magasin::searchProd(std::string titre){
+	int Magasin::searchProd(std::string titre){
 		for (int i=0; i<_listeProduits.size(); i++){
 			if(titre==_listeProduits.at(i).getTitre()){
 				std::cout<<_listeProduits.at(i)<<std::endl<<std::endl;
-				return true;
+				return i;
 			}							
 		}
 		std::cout<<"Pas trouvé"<<std::endl;
-		return false;		
+		return -1;		
 	}
-  bool Magasin::searchClient(std::string ident){
+  int Magasin::searchClient(std::string ident){
 		for (int i=0; i<_listeClients.size(); i++){
 			if(ident==_listeClients.at(i).getIdent()){
 				std::cout << _listeClients.at(i)<<std::endl<<std::endl;
-				return true;
+				return i;
 			}							
 		}
 		std::cout<<"Pas trouvé"<<std::endl;
-		return false;		
+		return -1;		
 	}
 	bool Magasin::majProd(std::string titre){
 		for (int i=0; i<_listeProduits.size(); i++){
@@ -61,4 +61,21 @@ namespace mag{
 		std::cout<<"Pas trouvé"<<std::endl;	
 		return false;
 	}
+	void Magasin::addProdPanierClient(std::string ident, std::string titre){
+		int a = searchClient(ident);
+		int b= searchProd(titre);
+		if(a==-1){
+
+		}
+		else{
+			_listeClients.at(a).addToPanier(_listeProduits.at(b));
+		}
+		
+	}
+	void Magasin::AfficherPanierClient(){
+		for (int i=0; i<_listeClients.size(); i++){
+			_listeClients.at(i).getPanier();
+		}
+	}
+
 }

@@ -24,17 +24,21 @@ int main(){
 	//Supermarche.majProd("PS5");
 	//Supermarche.majProd("bruh");
 	//Supermarche.searchProd("PS5");
-	user1.addToPanier(test);
-	user1.addToPanier(test);
-	user1.addToPanier(test2);
-	user1.getPanier();
-	user1.modifQuantPanier("PS5");
-	user1.getPanier();
-	user1.suppProduitPanier("Nintendo Switch");
-	user1.getPanier();
+	//user1.addToPanier(test);
+	//user1.addToPanier(test);
+	//user1.addToPanier(test2);
+	//user1.getPanier();
+	//user1.modifQuantPanier("PS5");
+	//user1.getPanier();
+	//user1.suppProduitPanier("Nintendo Switch");
+	//user1.getPanier();
 	//user1.videPanier();
 	//user1.getPanier();
-	Supermarche.AfficherListClient();
+	//Supermarche.AfficherListClient();
+
+	Supermarche.addProdPanierClient("tomdy","PS5");
+	std::cout << "---------------" << std::endl;
+	Supermarche.AfficherPanierClient();
 
 	return 0;
 }
