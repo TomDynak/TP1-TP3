@@ -2,6 +2,7 @@
 #include "magasin.h"
 #include "produit.h"
 #include "client.h"
+#include "commande.h"
 
 int main(){
 	mag::Magasin Supermarche;
