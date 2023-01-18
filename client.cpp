@@ -29,9 +29,9 @@ bool Client::addToPanier(mag::Produit produit){
 	return true;
 }
 
-bool Client::modifQuantPanier(std::string titre){
+bool Client::modifQuantPanier(mag::Produit produit){
 	for (int i=0; i<_titrePanier.size(); i++){
-		if(titre==_titrePanier.at(i)){
+		if(produit.getTitre()==_titrePanier.at(i)){
 		unsigned int quantite;
 		std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<titre<<std::endl;
 		std::cin >> quantite;
@@ -43,9 +43,9 @@ bool Client::modifQuantPanier(std::string titre){
 		return false;
 	}
 
-bool Client::suppProduitPanier(std::string titre){
+bool Client::suppProduitPanier(mag::Produit produit){
 	for (int i=0; i<_titrePanier.size(); i++){
-		if(titre==_titrePanier.at(i)){
+		if(produit.getTitre()==_titrePanier.at(i)){
 			
 		_titrePanier.erase(_titrePanier.begin()+i);
 		_descriptionPanier.erase(_descriptionPanier.begin()+i);

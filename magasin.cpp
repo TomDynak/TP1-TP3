@@ -64,13 +64,36 @@ namespace mag{
 	void Magasin::addProdPanierClient(std::string ident, std::string titre){
 		int a = searchClient(ident);
 		int b= searchProd(titre);
-		if(a==-1){
+		if(a==-1 || b==-1){
 
 		}
 		else{
 			_listeClients.at(a).addToPanier(_listeProduits.at(b));
 		}
 		
+	}
+	void Magasin::suppPanierClient(std::string ident, std::string titre){
+		int a = searchClient(ident);
+		int b= searchProd(titre);
+		if(a==-1 || b==-1){
+
+		}
+		else{
+			_listeClients.at(a).suppProduitPanier(_listeProduits.at(b))
+		}
+
+	}
+
+	void Magasin::modifQuantPanierClient(std::string ident, std::string titre){
+		int a = searchClient(ident);
+		int b= searchProd(titre);
+		if(a==-1 || b==-1){
+
+		}
+		else{
+			_listeClients.at(a).modifQuantPanier(_listeProduits.at(b))
+		}
+
 	}
 	void Magasin::AfficherPanierClient(){
 		for (int i=0; i<_listeClients.size(); i++){
