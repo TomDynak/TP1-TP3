@@ -15,16 +15,25 @@ namespace mag {
     void addClient(Client client);
 	void AfficherListProd();
 	void AfficherListClient();
-	bool searchProd(std::string titre);
-    bool searchClient(std::string ident);
+	int searchProd(std::string titre);
+    int searchClient(std::string ident);
 	bool majProd(std::string titre);
-
+	void addProdPanierClient(std::string ident, std::string titre);
+	void suppPanierClient(std::string ident, std::string titre);
+	void modifQuantPanierClient(std::string ident, std::string titre);
+	void AfficherPanierClient();
 
 
 
 	private:
 	std::vector<Produit> _listeProduits;
 	std::vector<Client> _listeClients;
+
+	std::vector<std::string> _titrePanier;
+	std::vector<std::string> _descriptionPanier;
+	std::vector<unsigned int> _quantitePanier;
+	std::vector<double> _prixPanier;
+	unsigned int _quantite;
 
 	};
 }
