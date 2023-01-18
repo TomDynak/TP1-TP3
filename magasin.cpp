@@ -22,6 +22,11 @@ namespace mag{
 			std::cout<<_listeProduits.at(i)<<std::endl<<std::endl;
 		}
 	}
+	void Magasin::AfficherListClient(){
+		for (int i=0; i<_listeClients.size(); i++){
+			std::cout<<_listeClients.at(i)<<std::endl<<std::endl;
+		}
+	}
 	bool Magasin::searchProd(std::string titre){
 		for (int i=0; i<_listeProduits.size(); i++){
 			if(titre==_listeProduits.at(i).getTitre()){
