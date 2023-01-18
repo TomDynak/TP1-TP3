@@ -28,8 +28,36 @@ bool Client::addToPanier(mag::Produit produit){
 	}
 	return true;
 }
-	//}	
-//}
+
+bool Client::modifQuantPanier(std::string titre){
+	for (int i=0; i<_titrePanier.size(); i++){
+		if(titre==_titrePanier.at(i)){
+		unsigned int quantite;
+		std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<titre<<std::endl;
+		std::cin >> quantite;
+		_quantitePanier.at(i)=quantite;
+		return true;
+		}
+	}
+		std::cout<<"Pas trouvé"<<std::endl;	
+		return false;
+	}
+
+bool Client::suppProduitPanier(std::string titre){
+	for (int i=0; i<_titrePanier.size(); i++){
+		if(titre==_titrePanier.at(i)){
+			
+		_titrePanier.erase(_titrePanier.begin()+i);
+		_descriptionPanier.erase(_descriptionPanier.begin()+i);
+		_quantitePanier.erase(_quantitePanier.begin()+i);
+		_prixPanier.erase(_prixPanier.begin()+i);
+		return true;
+		}
+	}
+		std::cout<<"Pas trouvé"<<std::endl;	
+		return false;
+	}
+
 void Client::getPanier(){
 	for(int i=0; i<_titrePanier.size(); i++){
 		std::cout << _titrePanier.at(i) << std::endl;

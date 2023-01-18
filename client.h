@@ -15,8 +15,10 @@ public:
 	std::string getPrenom();
 	std::string getNom();
 	void getPanier();
+	bool modifQuantPanier(std::string titre);
 	void videPanier();
 	bool addToPanier(Produit produit);
+	bool suppProduitPanier(std::string titre);
 
 private:
 	std::string _ident;

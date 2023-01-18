@@ -24,6 +24,10 @@ int main(){
 	user1.addToPanier(test);
 	user1.addToPanier(test2);
 	user1.getPanier();
+	user1.modifQuantPanier("PS5");
+	user1.getPanier();
+	user1.suppProduitPanier("Nintendo Switch");
+	user1.getPanier();
 	//user1.videPanier();
 	//user1.getPanier();
 
