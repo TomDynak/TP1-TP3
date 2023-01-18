@@ -56,4 +56,12 @@ std::string Client::getNom(){
 	return _nom;
 }
 
+std::string toString(Client c){
+	return c.getIdent() + "\n" + c.getPrenom() + "\n" + c.getNom(); //ajouter le panier
+	}
+std::ostream& operator<<(std::ostream& os, Client& c){
+	os << toString(c);
+	return os;
+	}
+
 }

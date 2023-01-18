@@ -12,6 +12,10 @@ namespace mag{
 	void Magasin::addProd(mag::Produit produit){
 		_listeProduits.push_back(produit);
 	}
+  void Magasin::addClient(mag::Client client){
+    //Vérifier avec searchClient si il n'y est pas déjà?
+		_listeClients.push_back(client);
+	}
 
 	void Magasin::AfficherListProd(){
 		for (int i=0; i<_listeProduits.size(); i++){
@@ -28,6 +32,16 @@ namespace mag{
 		std::cout<<"Pas trouvé"<<std::endl;
 		return false;		
 	}
+  bool Magasin::searchClient(std::string ident){
+		for (int i=0; i<_listeClients.size(); i++){
+			if(ident==_listeClients.at(i).getIdent()){
+				std::cout << _listeClients.at(i)<<std::endl<<std::endl;
+				return true;
+			}							
+		}
+		std::cout<<"Pas trouvé"<<std::endl;
+		return false;		
+	}
 	bool Magasin::majProd(std::string titre){
 		for (int i=0; i<_listeProduits.size(); i++){
 			if(titre==_listeProduits.at(i).getTitre()){
@@ -38,7 +52,7 @@ namespace mag{
 			return true;
 		}
 	}
-		std::cout<<"Produit non trouvé"<<std::endl;	
+		std::cout<<"Pas trouvé"<<std::endl;	
 		return false;
 	}
 }

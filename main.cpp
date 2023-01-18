@@ -17,7 +17,7 @@ int main(){
 
 	//Supermarche.searchProd("Nintendo Switch");
 
-	Supermarche.majProd("PS5");
+	//Supermarche.majProd("PS5");
 	//Supermarche.majProd("bruh");
 	//Supermarche.searchProd("PS5");
 	user1.addToPanier(test);

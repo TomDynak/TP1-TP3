@@ -29,7 +29,8 @@ private:
 	std::vector<double> _prixPanier;
 	unsigned int _quantite;
 };
-
+	std::string toString(Client c);
+	std::ostream& operator<<(std::ostream& os, Client& c);
 }
 
 #endif

@@ -11,9 +11,12 @@ namespace mag {
 	public:
 	Magasin();
 	void addProd(Produit produit);
+    void addClient(Client client);
 	void AfficherListProd();
 	bool searchProd(std::string titre);
+    bool searchClient(std::string ident);
 	bool majProd(std::string titre);
+
 
 
 
