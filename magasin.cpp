@@ -3,6 +3,7 @@
 #include <vector>
 #include "magasin.h"
 #include "produit.h"
+#include "client.h"
 #include "commande.h"
 
 namespace mag{
@@ -102,9 +103,10 @@ namespace mag{
 	}
 
 	void Magasin::addCommande(std::string ident){ //Recupere le panier
-		Commande c(ident);
-		/*for(int i=0; i < c.getPanierSize(); i++){
-			client.addProduit(getTitrePanier(i),getDescriptionPanier(i),getQuantitePanier(i),getPrixPanier(i));
+		/*mag::Commande c(ident);
+		_listeClients.at(searchClient(ident));
+		for(int i=0; i < _listeClient.at(searchClient(ident)); i++){
+			_listeCommandes=c._listeClients.at(searchClient(ident)).addProduit(getTitrePanier(i),getDescriptionPanier(i),getQuantitePanier(i),getPrixPanier(i));
 		}*/
 	}
 

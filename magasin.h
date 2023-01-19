@@ -29,6 +29,7 @@ namespace mag {
 	private:
 	std::vector<Produit> _listeProduits;
 	std::vector<Client> _listeClients;
+	std::vector<Commande> _listeCommandes;
 
 	std::vector<std::string> _titrePanier;
 	std::vector<std::string> _descriptionPanier;

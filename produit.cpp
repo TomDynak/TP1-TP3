@@ -35,10 +35,6 @@ std::string toString(Produit p){
 	return p.getTitre() + "\n" + p.getDescription() + "\n" + std::to_string(p.getQuantite()) + "\n"+ p.getPrixString();
 	}
 
-	/*std::string toStringClient(Produit p){
-		return p.getTitre() + "\n" + p.getDescription() + "\n"+ p.getPrix();
-	}*/
-
 std::ostream& operator<<(std::ostream& os, Produit& p){
 	os << toString(p);
 	return os;

@@ -23,7 +23,6 @@ namespace mag{
 		int _centime;
 	};
 	std::string toString(Produit p);
-	//std::string toStringClient(Produit p);
 	std::ostream& operator<<(std::ostream& os, Produit& p);
 }
 

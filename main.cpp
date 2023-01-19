@@ -10,6 +10,7 @@ int main(){
 	mag::Produit test2("Nintendo Switch","Console de Jeux", 3, 400.50);
 	mag::Client user1("tomdy","Tom","Dynak");
 	mag::Client user2("nbar","Baréké","Ntawiniga");
+	mag::Commande c("tomdy");
 	//test.modifQuantite(0);
 
 	Supermarche.addProd(test);
@@ -39,6 +40,7 @@ int main(){
 	Supermarche.addProdPanierClient("tomdy","PS5");
 	std::cout << "---------------" << std::endl;
 	Supermarche.AfficherPanierClient();
+	std::cout<<c;
 
 	return 0;
 }

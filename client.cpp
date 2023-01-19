@@ -33,7 +33,7 @@ bool Client::modifQuantPanier(mag::Produit produit){
 	for (int i=0; i<_titrePanier.size(); i++){
 		if(produit.getTitre()==_titrePanier.at(i)){
 		unsigned int quantite;
-		//std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<titre<<std::endl;
+		std::cout<<"Quelle est la nouvelle quantité de ce produit : "<<produit.getTitre()<<std::endl;
 		std::cin >> quantite;
 		_quantitePanier.at(i)=quantite;
 		return true;
