@@ -103,11 +103,13 @@ namespace mag{
 	}
 
 	void Magasin::addCommande(std::string ident){ //Recupere le panier
-		/*mag::Commande c(ident);
-		_listeClients.at(searchClient(ident));
-		for(int i=0; i < _listeClient.at(searchClient(ident)); i++){
-			_listeCommandes=c._listeClients.at(searchClient(ident)).addProduit(getTitrePanier(i),getDescriptionPanier(i),getQuantitePanier(i),getPrixPanier(i));
-		}*/
-	}
+        mag::Commande c(ident);
+    Client client = _listeClients.at(searchClient(ident)); // On fait une copie mais on la modifie pas donc ça va
+        _listeClients.at(searchClient(ident));
+        for(int i=0; i < client.getPanierSize(); i++){
+            c.addProduit(client.getTitrePanier(i),client.getDescriptionPanier(i),client.getQuantitePanier(i),client.getPrixPanier(i));
+        }
+    _listeCommandes.push_back(c);
+    }
 
 }
