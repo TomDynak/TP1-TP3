@@ -59,8 +59,13 @@ namespace mag{
 			_quantites.push_back(1);
 			_prix.push_back(p.getPrix());
 		}
+		}
 
-	}
+		void Commande::addTrue(){
+			_status=true;
+		}
+
+	
 
 
 

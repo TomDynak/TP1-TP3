@@ -12,6 +12,7 @@ namespace mag {
 		Commande(std::string identClient = "anonymous");
 		std::string getIdent();
 		std::string listeProduit();
+		void addTrue();
 		void addProduit(std::string titre, std::string description, unsigned int quantite, double prix);
 		void addProduit(Produit p);
 	private:
