@@ -47,11 +47,11 @@ namespace mag{
   int Magasin::searchClient(std::string ident){
 		for (int i=0; i<_listeClients.size(); i++){
 			if(ident==_listeClients.at(i).getIdent()){
-				std::cout << _listeClients.at(i)<<std::endl<<std::endl;
+				//std::cout << _listeClients.at(i)<<std::endl<<std::endl;
 				return i;
 			}							
 		}
-		std::cout<<"Pas trouvé"<<std::endl;
+		//std::cout<<"Pas trouvé"<<std::endl;
 		return -1;		
 	}
 	bool Magasin::majProd(std::string titre){
