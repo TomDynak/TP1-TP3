@@ -15,6 +15,7 @@ namespace mag {
     void addClient(Client client);
 	void AfficherListProd();
 	void AfficherListClient();
+	void AfficherListCommand();
 	int searchProd(std::string titre);
     int searchClient(std::string ident);
 	bool majProd(std::string titre);

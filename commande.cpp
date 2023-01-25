@@ -24,6 +24,16 @@ namespace mag{
 		}
 		return text;
 	}
+	std::string Commande::getStatus(){
+		std::string status;
+		if(_status==true){
+			status="Commande validée";
+		}
+		else{
+			status="Commande en cours de livraison";
+		}
+		return status;
+	}
 
 	int Commande::searchEqTitre(std::string titre){
 		for (int i=0; i<_titres.size();i++){
@@ -70,7 +80,7 @@ namespace mag{
 
 
 	std::string toString(Commande c){
-		std::string text = c.getIdent() + "\n" + c.listeProduit();
+		std::string text = c.getIdent() + "\n" + c.listeProduit() + "\n" + c.getStatus() ;
 		return text;
 	}
 	std::ostream& operator<<(std::ostream& os, Commande& c){

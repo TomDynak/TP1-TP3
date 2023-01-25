@@ -18,6 +18,11 @@ namespace mag{
     //Vérifier avec searchClient si il n'y est pas déjà?
 		_listeClients.push_back(client);
 	}
+	void Magasin::AfficherListCommand(){
+		for (int i=0; i<_listeCommandes.size(); i++){
+			std::cout<<_listeCommandes.at(i)<<std::endl<<std::endl;
+		}
+	}
 
 	void Magasin::AfficherListProd(){
 		for (int i=0; i<_listeProduits.size(); i++){
@@ -118,9 +123,7 @@ namespace mag{
    			if(c.getIdent()==_listeCommandes.at(i).getIdent()){
    					_listeCommandes.at(i).addTrue();
    				
-   			}
-   		
-   		}
-   		
+   			}   		
+   		} 		
    }
 }
