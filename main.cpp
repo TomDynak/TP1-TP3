@@ -10,7 +10,7 @@ int main(){
 int condition=0;
 int condition2=1;
 std::string user;
-std::string nom, description;
+std::string nom, description, prenom;
 unsigned int quantite;
 float prix;
 
@@ -73,7 +73,7 @@ if(condition==3 && condition2==3){
 }
 	
 if(condition==2 && condition2==2){
-	std::cout<<"==================================Gestion Utilisateurs====================================\n\nAjouter des utilisateurs (1) || Ajout d'un produit (2) || Affichage des produits (3) || Retourner au menu principal (0)"<<std::endl;
+	std::cout<<"==================================Gestion Utilisateurs====================================\n\nAjouter un client (1) || Rechercher un client (2) || Rechercher une commande effectuée par un client (3) || Retourner au menu principal (0)"<<std::endl;
 	std::cin>>condition;
 	if(condition>0){
 		condition2++;
@@ -82,9 +82,58 @@ if(condition==2 && condition2==2){
 		condition2--;
 	}
 	}	
-	
-	
+if(condition==1 && condition2==3){
+	std::cout<<"Rentrer l'identifiant du client"<<std::endl;
+	std::cin>>user;
+	std::cout<<"Rentrer le nom du client"<<std::endl;
+	std::cin>>nom;
+	std::cout<<"Rentrer le prénom du client"<<std::endl;
+	std::cin>>prenom;
+	mag::Client user1 (user, nom, prenom);
+	Supermarche.addClient(user1);
+	condition2=2;
+	condition=2;
+}
+if(condition==2 && condition2==3){
+	std::cout<<"Rentrer l'identifiant du client"<<std::endl;
+	std::cin>>user;
+	Supermarche.searchClient(user);
+	condition2=2;
+	condition=2;
+}		
+if(condition==3 && condition2==3){
+	std::cout<<"Rentrer l'identifiant du client"<<std::endl;
+	std::cin>>user;
+	Supermarche.AfficherCommandeClient(user);
+	condition2=2;
+	condition=2;
+}	
 
+if(condition==3 && condition2==2){
+	std::cout<<"==================================Gestion Commandes====================================\n\nValider la commande d'un client (1) || Rechercher une commande effectuée par un client (2) || Retourner au menu principal (0)"<<std::endl;
+	std::cin>>condition;
+	if(condition>0){
+		condition2++;
+	}
+	else{
+		condition2--;
+	}
+	}	
+
+if(condition==1 && condition2==3){
+	std::cout<<"Rentrer l'identifiant du client"<<std::endl;
+	std::cin>>user;
+	Supermarche.validCommand(user);
+	condition2=2;
+	condition=3;
+}
+
+if(condition==2 && condition2==3){
+	std::cout<<"Entrer le nom d'utilisateur de la commande :"<<std::endl;
+	std::cin>>user;
+	Supermarche.addCommande(user);
+	Supermarche.AfficherCommandeClient(user);
+}
 
 
 	//test.modifQuantite(0);
