@@ -116,6 +116,13 @@ namespace mag{
         }
     _listeCommandes.push_back(c);
     }
+  void Magasin::AfficherCommandeClient(std::string ident){
+  	for(int i=0; i<_listeCommandes.size(); i++){
+  		if(_listeCommandes.at(i).getIdent()==ident){
+  			std::cout<<_listeCommandes.at(i)<<std::endl<<std::endl;
+  		}
+  }
+}
 
    void Magasin::validCommand(std::string ident){
    	Commande c(ident);
